@@ -30,6 +30,10 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     padding: 10px 10px;
+    align-items: flex-start; 
+    /* Классу .content добавить
+    align-items: flex-start;, чтобы высота колонки
+    зависила от кол-ва контента */
 }
 
 .column > p {
