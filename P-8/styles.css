@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+header, footer {
+    background: #F8BFC7;
+    padding: 30px;
+    width: 100%;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    color: #fff;
+}
+
+article {
+    background: #336FD1;
+    position: relative;
+}
+
+article p {
+    color: #FEB700;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+
+    padding-bottom: 30px;
+    padding-top: 400px;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+  }
+
+
+.menu-nav {
+    width: 100%;
+}
+
+.menu-ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-ul >li {
+    display: flex;
+}
+
+
+.menu-ul >li:last-of-type {
+    margin-right: 0;
+}
+
+/* выпадающее меню */
+
+.dropdown {
+    position: relative;
+    display: none;
+    visibility: hidden;
+  }
+
+.dropdown:hover .features-menu {
+display: flex;
+flex-direction: column;
+padding: 10px;
+border: 1px solid #fff;
+border-radius: 16px;
+background: #F8BFC7;
+
+position: absolute;
+top: 25px;              
+left: -90px; 
+
+z-index: 1;
+}
+
+
+.features-menu li {
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+    margin: 4px;
+}
+
+.features-menu li:last-of-type {
+    border-bottom: none;
+  }
+
+  .dropdown > span {
+    z-index: 2;
+    position: relative;  /* Это очень важно! */
+    cursor: pointer;
+  }
+
+  .features-menu {                    
+    display: none; /* Добавляем новое правило */
+  }
+  /* тут выпадающее меню заканчивается */
+
+  /* форма */
+.speaker-form {
+    width: 80%;
+
+    position: absolute;
+    top: 120px;
+    left: 31px;
+}
+
+.decor-form {
+    background-color: #F8BFC7;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    color: #fff;
+    font-size: 20px;
+
+    margin-bottom: 30px;
+    }
+
+button {
+    width: 70%;
+    padding: 10px;
+
+    margin: 0 auto;
+
+    background-color: #FEB700;
+    border: 3px solid #fff;
+    border-radius: 30px;
+
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+button:hover {
+    background-color: #FF5000;
+}
+button:active {
+    background-color: #FFD930;
+    
+}
+
+input { outline:none; }
+
+.form-row input[type='text'],
+.form-row input[type="email"] {
+    background-color: #F8BFC7;
+    border-bottom: 1px solid #fff;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    color: #fff; !important
+}
+
+.form-row input[type='text']:invalid,
+.form-row input[type="email"]:invalid {
+    background-color: #F8BFC7;
+    border-bottom: 3px solid #FF5000;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    box-shadow: none;
+}
+ /* тут форма заканчивается */
+
+
+/* Макет для десктопа */
+@media (min-width: 800px) {
+
+    header, footer {
+        font-size: 20px;
+    }
+
+    .dropdown {
+        display: block;
+        visibility: visible;
+    }
+
+   /* .menu-1 {
+        display: block;
+        visibility: visible;
+    }
+    */
+
+    .menu-nav {
+        width: 50%;
+    }
+
+    .menu-ul > li {
+        display: inline;
+        margin-right: 32px;
+    }
+
+    .menu-ul >li:last-of-type {
+        margin-right: 0;
+    }
+
+    article p {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 57px;
+
+        padding-bottom: 60px;
+        padding-top: 10px;
+    }
+
+
+/* форма */
+.speaker-form {
+    width: 20%;
+
+    top: 120px;
+    left: 110px;
+}
+
+button {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px; 
+}
+
+}
